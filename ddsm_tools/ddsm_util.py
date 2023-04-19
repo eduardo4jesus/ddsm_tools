@@ -19,8 +19,8 @@ def get_value(lst, row_name, idx):
             try:
                 val = l[idx]
             except Exception:
-                print row_name, idx
-                print lst
+                print(row_name, idx)
+                print(lst)
                 val = None
             break
     return val
@@ -102,7 +102,7 @@ def get_abnormality_data(file_name):
         abnormal_idx = [idx for idx, l in enumerate(lines) if l[0].find("ABNORMALITY") == 0]
         abnormal_idx.append(len(lines))
     except:
-        print "Funky Formatted File!\n {0}".format(file_name)
+        print("Funky Formatted File!\n {0}".format(file_name))
         return []
 
     abnormality_data = []

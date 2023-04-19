@@ -74,7 +74,7 @@ def make_data_set(root, out_dir):
 
                 count += 1
                 if count % 100 == 0:
-                    print "abnormality {}".format(count)
+                    print("abnormality {}".format(count))
 
                 try:
                     # raw gray-level
@@ -97,12 +97,12 @@ def make_data_set(root, out_dir):
                     abnormality.mask_path = abnormality.save_mask(out_dir=mask_dir)
 
                 except ValueError:
-                    print "Error with abnormality at " + abnormality.input_file_path
+                    print("Error with abnormality at " + abnormality.input_file_path)
 
                 try:
                     outfile_writer.writerow([getattr(abnormality, f) for f in fields])
                 except AttributeError:
-                    print "Abnormality {} has no od image".format(abnormality.input_file_path)
+                    print("Abnormality {} has no od image".format(abnormality.input_file_path))
 
     outfile.close()
 

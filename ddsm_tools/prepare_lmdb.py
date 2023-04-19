@@ -108,7 +108,7 @@ def make_lmdb(data_dir,
                     lmdb_output_path]
 
         call_str = " ".join(call_lst)
-        print call_str
+        print(call_str)
         call(call_str, shell=True)
 
         # make mean image of training data

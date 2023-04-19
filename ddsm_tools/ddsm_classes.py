@@ -155,7 +155,7 @@ class ddsm_abnormality(object):
                 call_lst = ['./jpegdir/jpeg', '-d', '-s', ljpeg_path]
                 call(call_lst, stdout=log_file)
 
-        print "Decompressed {}".format(ljpeg_path)
+        print("Decompressed {}".format(ljpeg_path))
 
     def _read_raw_image(self, force=False):
         """
